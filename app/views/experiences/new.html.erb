@@ -1,0 +1,29 @@
+<h2>fill your experiences details</h2>
+<div class ="center">
+<%= form_for @experience do |f| %>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Designation</label>
+    <%= f.text_field :designation, class: "form-control" , id: "exampleInputEmail1" , placeholder: "Enter Designation" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Company</label>
+    <%= f.text_field :company,class: "form-control", placeholder:"Company" %>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">Description</label>
+    <%= f.text_area :description,class: "form-control" %>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">Start Date</label>
+    <%= f.text_field :start_date,class: "form-control"%>
+  </div>
+      <div class="form-group">
+    <label for="exampleInputPassword1">End Date</label>
+    <%= f.text_field :end_date,class: "form-control"%>
+  </div>
+  <%=f.hidden_field :user_id, value: current_user.id%>
+  <%=f.submit  %>
+<% end %>
+</div>
+<%=link_to 'Back', experiences_path %>
+

@@ -1,0 +1,30 @@
+<h2>fill your educations details</h2>
+<div class ="center">
+<%= form_for @education do |f| %>
+  <div class="form-group">
+    <label for="exampleInputEmail1">University Name</label>
+    <%= f.text_field :university_name, class: "form-control" , id: "exampleInputEmail1" , placeholder: "Enter university_name" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Stream</label>
+    <%= f.text_field :stream,class: "form-control", placeholder:"stream" %>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">Percentage</label>
+    <%= f.text_field :percentage,class: "form-control" %>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">Start Date</label>
+    <%= f.text_field :start_date,class: "form-control"%>
+  </div>
+      <div class="form-group">
+    <label for="exampleInputPassword1">End Date</label>
+    <%= f.text_field :end_date,class: "form-control"%>
+  </div>
+  <%=f.hidden_field :user_id, value: current_user.id%>
+  <%=f.submit  %>
+<% end %>
+</div>
+
+<%=link_to 'Add More Education' , add_more_path %>
+

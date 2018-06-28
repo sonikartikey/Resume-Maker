@@ -1,0 +1,14 @@
+<h2>Awards details</h2>
+<div class ="center">
+<%= form_for @award do |f| %>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Awards</label>
+    <%= f.text_field :description,class: "form-control"%>
+  </div>
+  <%=f.hidden_field :user_id, value: current_user.id%>
+  <%=f.submit  %>
+<% end %>
+</div>
+<%=link_to 'Back', awards_path %>
+
+

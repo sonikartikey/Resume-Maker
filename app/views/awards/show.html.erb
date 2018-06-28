@@ -1,0 +1,14 @@
+<h2>fill your educations details</h2>
+<div class ="center">
+  <div class="form-group">
+    <label for="exampleInputPassword1">Description::</label>
+    <%= @award.description%>
+  </div>
+</div>
+<div class = "center">
+<%=link_to 'Edit award',  edit_award_path(@award.id) %>
+<br><hr>
+<%=link_to 'Back', awards_path %>
+<br><hr>
+<%= link_to 'Delete',  award_path(@award.id), method: :delete %>
+</div>

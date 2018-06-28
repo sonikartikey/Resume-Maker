@@ -1,0 +1,32 @@
+<h2>fill your educations details</h2>
+<div class ="center">
+  <div class="form-group">
+    <label for="exampleInputEmail1">university_name::</label>
+    <%= @education.university_name %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">stream::</label>
+    <%= @education.stream%>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">percentage::</label>
+    <%= @education.percentage %>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">qualification::</label>
+    <%= @education.qualification%>
+  </div>
+      <div class="form-group">
+    <label for="exampleInputPassword1">start date::</label>
+    <%= @education.start_date%>
+  </div>
+        <div class="form-group">
+    <label for="exampleInputPassword1">End date::</label>
+    <%= @education.end_date%>
+  </div>
+</div>
+<div class = "center">
+<%=link_to 'Edit education',  edit_education_path(@education.id) %>
+<br><hr>
+<%=link_to 'Back', educations_path %>
+</div>

@@ -1,0 +1,26 @@
+<%@abouts.each do |about|%>
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th scope="col">email</th>
+      <th scope="col">address</th>
+      <th scope="col">description</th>
+      <th scope="col">Show Links</th>
+      <th scope="col">Edit Links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><%=about.name%></td>
+      <td><%=about.email%></td>
+      <td><%=about.address%></td>
+      <td><%=about.description%></td>
+      <td><%=link_to 'show', about_path(about.id) %></td>
+      <td><%=link_to 'Edit', edit_about_path(about.id) %></td>
+    </tr>
+  </tbody>
+</table>
+<%end%>

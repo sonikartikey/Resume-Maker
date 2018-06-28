@@ -1,0 +1,12 @@
+<h2>fill your educations details</h2>
+<div class ="center">
+<%= form_for @award , method: :patch do |f| %>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Description</label>
+    <%= f.text_area :description,class: "form-control"%>
+  </div>
+  <%=f.hidden_field :user_id, value: current_user.id%>
+  <%=f.submit  %>
+<% end %>
+</div>
+<%=link_to 'Back', awards_path %>
